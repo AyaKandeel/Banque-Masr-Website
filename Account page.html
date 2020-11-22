@@ -1,0 +1,82 @@
+<html>
+<html>
+<title>my page</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+‏  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+‏  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<style>
+head {
+  background-color: gray;
+}
+body {
+  background-color:MediumSeaGreen;
+}
+h1 {
+  font-size: 60px;
+}
+
+h1 {
+  text-shadow: 2px 2px black;
+}
+
+#div1 {
+  width: 500px;
+  height: 150px;
+  padding: 50px;
+  border: 3px solid #aaaaaa;
+}
+</style>
+<script>
+function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}
+</script>
+</head>
+<body>
+<div class="jumbotron text-center">
+<p>Drag the image into the rectangle:</p>
+
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<br>
+<img id="drag1" src="PHVVV.jpeg" draggable="true" ondragstart="drag(event)" width="480" height="135">
+
+</div>
+<form action="/action_page.php" target="_blank">
+  <h2><input class="w3-input w3-border" type="text" placeholder="Name" required name="Name"></h2>
+  <h2><input class="w3-input w3-border" type="text" placeholder="Email" required name="Email"></h2>
+  <h2><input class="w3-input w3-border" type="text" placeholder="Subject" required name="Phone Number"></h2>
+  <h2><input class="w3-input w3-border" type="text" placeholder="Address" required name="Address"></h2>
+  <h2><input class="w3-input w3-border" type="text" placeholder="Age" required name="Age"></h2>
+
+    <button class="w3-button w3-black" type="submit">
+      <i class="fa fa-paper-plane"></i> Sign in
+    </button>
+    <button class="w3-button w3-black" type="submit">
+      <i class="fa fa-paper-plane"></i> Login
+    </button>
+
+</form>
+
+</div>
+</div>
+
+</body>
+</html>

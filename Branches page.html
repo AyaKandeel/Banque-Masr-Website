@@ -1,0 +1,67 @@
+<HTML>
+<html lang="en">
+<head>
+	<title>my new page</title>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  ‏  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  ‏  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  ‏  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<style>
+	head {
+	  background-color: gray;
+	}
+	body {
+	  background-color:Slateblue;
+	}
+	h1 {
+	  font-size: 50px;
+	}
+
+	p {
+	 font-size: 20px;
+	}
+
+	</style>
+</head>
+<body>
+   <div class="jumbotron text-center">
+             <h2>service area</h2>
+             <button type="button" class="btn btn-primary btn-block">cairo</button>
+             <button type="button" class="btn btn-success btn-block">Menofia</button>
+             <br>
+             <button type="button" class="btn btn-danger btn-block">Gharbia</button>
+             <button type="button" class="btn btn-info btn-block">Alexandri</button>
+             <br>
+             <button type="button" class="btn btn-dark btn-block">Fayoum</button>
+             <button type="button" class="btn btn-secondary btn-block">sadaat</button>
+             <br>
+						 <p>Click the button to get your coordinates.</p>
+
+<button onclick="getLocation()">Try It</button>
+
+<p id="demo"></p>
+
+<script>
+var x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else {
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude +
+  "<br>Longitude: " + position.coords.longitude;
+}
+</script>
+
+     </div>
+
+           </body>
+        </html>
